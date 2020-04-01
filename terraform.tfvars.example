@@ -1,0 +1,9 @@
+instance_name = "jenkins-master"
+instance_machine_type = "n1-standard-2"
+instance_zone = "<your_zone>"
+instance_image = "centos-cloud/centos-7-v20200309"
+project     = "<your_project_id>"
+region      = "<your_region>"
+subnet_name = "default"
+external_enabled = true
+startup_script = "yum install -y git; git clone "
