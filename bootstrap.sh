@@ -10,6 +10,7 @@ yum install jenkins -y
 rm -rf /var/lib/jenkins
 git clone https://github.com/bharatmicrosystems/filestore.git
 cd filestore && cp -a jenkins /var/lib/jenkins
+chown -R jenkins:jenkins /var/lib/jenkins
 systemctl enable jenkins
 systemctl start jenkins
 firewall-cmd --zone=public --permanent --add-port=8080/tcp
