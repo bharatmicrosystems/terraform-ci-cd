@@ -6,4 +6,5 @@ project     = "<your_project_id>"
 region      = "<your_region>"
 subnet_name = "default"
 external_enabled = true
+source_ranges = ["IP_1","IP_2"]
 startup_script = "yum install -y git; git clone https://github.com/bharatmicrosystems/terraform-ci-cd.git && cd terraform-ci-cd && sh -x bootstrap.sh > /tmp/bootstrap.log"
