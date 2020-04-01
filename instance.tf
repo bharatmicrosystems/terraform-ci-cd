@@ -22,3 +22,13 @@ resource "google_compute_instance" "main" {
 
   allow_stopping_for_update = true
 }
+
+resource "google_compute_firewall" "default" {
+  name    = "allow-jenkins"
+  network = "default"
+  source_ranges = ["<your_ip_range>"]
+  allow {
+    protocol = "tcp"
+    ports    = ["8080"]
+  }
+}
