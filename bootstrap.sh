@@ -7,21 +7,6 @@ source /etc/profile
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install jenkins -y
-./usr/local/bin/install-plugins.sh ssh-slaves
-#
-# # install Notifications and Publishing plugins
-./usr/local/bin/install-plugins.sh email-ext
-./usr/local/bin/install-plugins.sh mailer
-./usr/local/bin/install-plugins.sh slack
-#
-./usr/local/bin/install-plugins.sh htmlpublisher
-#
-# # UI
-./usr/local/bin/install-plugins.sh greenballs
-./usr/local/bin/install-plugins.sh simple-theme-plugin
-#
-# # Scaling
-./usr/local/bin/install-plugins.sh kubernetes
 systemctl enable jenkins
 systemctl start jenkins
 firewall-cmd --zone=public --permanent --add-port=8080/tcp
