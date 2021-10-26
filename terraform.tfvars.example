@@ -1,4 +1,4 @@
-instance_name = "jenkins-master"
+instance_name = "test-instance-1"
 instance_machine_type = "n1-standard-2"
 instance_zone = "<your_zone>"
 instance_image = "centos-cloud/centos-7-v20200309"
@@ -7,4 +7,4 @@ region      = "<your_region>"
 subnet_name = "default"
 external_enabled = true
 source_ranges = ["IP_1","IP_2"]
-startup_script = "yum install -y git; git clone https://github.com/bharatmicrosystems/terraform-ci-cd.git && cd terraform-ci-cd && sh -x bootstrap.sh > /tmp/bootstrap.log"
+startup_script = "yum install -y git"
